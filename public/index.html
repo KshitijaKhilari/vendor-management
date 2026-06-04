@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendor Management System</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">Backend API Dashboard</p>
+          <h1>Vendor Management System</h1>
+        </div>
+        <div class="session">
+          <span id="sessionStatus">Not logged in</span>
+          <button id="logoutBtn" class="ghost hidden" type="button">Logout</button>
+        </div>
+      </section>
+
+      <section id="authSection" class="grid two">
+        <form id="registerForm" class="panel">
+          <h2>Register Admin</h2>
+          <label>
+            Name
+            <input name="name" type="text" placeholder="Admin User" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" placeholder="admin@example.com" required />
+          </label>
+          <label>
+            Password
+            <input name="password" type="password" placeholder="Minimum 8 characters" required />
+          </label>
+          <button type="submit">Register</button>
+        </form>
+
+        <form id="loginForm" class="panel">
+          <h2>Login</h2>
+          <label>
+            Email
+            <input name="email" type="email" placeholder="admin@example.com" required />
+          </label>
+          <label>
+            Password
+            <input name="password" type="password" placeholder="password123" required />
+          </label>
+          <button type="submit">Login</button>
+        </form>
+      </section>
+
+      <section id="dashboardSection" class="hidden">
+        <section class="toolbar">
+          <input id="searchInput" type="search" placeholder="Search vendor or company" />
+          <select id="statusFilter">
+            <option value="">All statuses</option>
+            <option value="ACTIVE">Active</option>
+            <option value="INACTIVE">Inactive</option>
+          </select>
+          <input id="cityFilter" type="text" placeholder="City" />
+          <select id="sortBy">
+            <option value="createdAt">Created date</option>
+            <option value="vendorName">Vendor name</option>
+            <option value="companyName">Company name</option>
+          </select>
+          <select id="sortOrder">
+            <option value="desc">Desc</option>
+            <option value="asc">Asc</option>
+          </select>
+          <button id="applyFiltersBtn" type="button">Apply</button>
+        </section>
+
+        <section class="grid dashboard">
+          <form id="vendorForm" class="panel vendor-form">
+            <h2 id="formTitle">Add Vendor</h2>
+            <input type="hidden" name="id" />
+            <label>
+              Vendor Name
+              <input name="vendorName" type="text" required />
+            </label>
+            <label>
+              Contact Person
+              <input name="contactPerson" type="text" required />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" required />
+            </label>
+            <label>
+              Phone
+              <input name="phone" type="text" required />
+            </label>
+            <label>
+              Company Name
+              <input name="companyName" type="text" required />
+            </label>
+            <label>
+              GST Number
+              <input name="gstNumber" type="text" required />
+            </label>
+            <label>
+              Address
+              <textarea name="address" rows="3" required></textarea>
+            </label>
+            <label>
+              City
+              <input name="city" type="text" required />
+            </label>
+            <label>
+              State
+              <input name="state" type="text" required />
+            </label>
+            <label>
+              Status
+              <select name="status">
+                <option value="ACTIVE">Active</option>
+                <option value="INACTIVE">Inactive</option>
+              </select>
+            </label>
+            <div class="actions">
+              <button type="submit">Save Vendor</button>
+              <button id="resetFormBtn" class="ghost" type="button">Clear</button>
+            </div>
+          </form>
+
+          <section class="panel list-panel">
+            <div class="list-heading">
+              <h2>Vendors</h2>
+              <span id="paginationInfo">0 records</span>
+            </div>
+            <div id="vendorList" class="vendor-list"></div>
+            <div class="pager">
+              <button id="prevPageBtn" class="ghost" type="button">Previous</button>
+              <span id="pageInfo">Page 1</span>
+              <button id="nextPageBtn" class="ghost" type="button">Next</button>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <div id="toast" class="toast hidden"></div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
