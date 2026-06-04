@@ -2,6 +2,19 @@
 
 A backend-focused REST API for managing vendors and suppliers. It uses Node.js, Express.js, PostgreSQL, Prisma ORM, JWT authentication, bcrypt password hashing, request validation, centralized error handling, filtering, pagination, and sorting.
 
+## Live Demo
+
+```text
+https://vendor-management-srco.onrender.com
+```
+
+Seed login:
+
+```text
+Email: admin@example.com
+Password: password123
+```
+
 ## Tech Stack
 
 - Node.js
