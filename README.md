@@ -52,11 +52,15 @@ src/
 
 ## Screenshots
 
-Screenshots can be added here:
+Screenshots are added here:
 
 - Login and registration page
+![alt text](image.png)
 - Vendor dashboard
+![alt text](image-1.png)
 - Vendor listing with filters
+![alt text](image-2.png)
+![alt text](image-4.png)
 
 ## Tech Stack
 
