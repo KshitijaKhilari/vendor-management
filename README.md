@@ -8,12 +8,55 @@ A backend-focused REST API for managing vendors and suppliers. It uses Node.js, 
 https://vendor-management-srco.onrender.com
 ```
 
-Seed login:
+Use the Register form or authentication API to create an administrator account.
+
+## Features
+
+- JWT authentication and authorization
+- Vendor CRUD operations
+- Search and filtering
+- Pagination
+- Sorting
+- Input validation
+- Centralized error handling
+- PostgreSQL database integration
+- Prisma ORM
+- RESTful API architecture
+
+## Project Structure
 
 ```text
-Email: admin@example.com
-Password: password123
+src/
+├── controllers/
+├── routes/
+├── middleware/
+├── services/
+├── validations/
+├── prisma/
+├── utils/
+├── config/
+├── app.js
+└── server.js
 ```
+
+## Key Concepts Demonstrated
+
+- REST API development
+- Authentication using JWT
+- Password hashing with bcrypt
+- PostgreSQL database design
+- Prisma ORM
+- Request validation and centralized error handling
+- Filtering, sorting, and pagination
+- Deployment using Render
+
+## Screenshots
+
+Screenshots can be added here:
+
+- Login and registration page
+- Vendor dashboard
+- Vendor listing with filters
 
 ## Tech Stack
 
